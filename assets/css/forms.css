@@ -1,0 +1,71 @@
+.form-signup .form-control
+{
+    margin-bottom: 40px;
+}
+
+.form-signup input, .form-signup select
+{
+    text-align: center;
+}
+
+.form-signup input
+{
+    border: none;
+    box-shadow: none;
+    border-bottom: #dfbf9f solid 2px;
+    border-radius: 0px;
+    transition: 0.5s;
+    font-size: 140%;
+    letter-spacing: 2px;
+}
+
+.form-signup select
+{
+    border-radius: 0px;
+    border: none;
+    border-bottom: #dfbf9f solid 2px;
+    box-shadow: none;
+    font-size: 140%;
+    letter-spacing: 2px;
+}
+
+.form-signup select:focus
+{
+    box-shadow: none;
+    border-bottom-color: #c68c53;
+}
+
+.form-signup input:focus
+{
+    box-shadow: none;
+    border-bottom-color: #c68c53;
+}
+
+#code
+{
+    letter-spacing: 10px;
+}
+
+.action-buttons
+{
+    display: inline-block;
+    padding: 1em;
+    background-color: white;
+    text-decoration: none;
+    border: solid 3px #dfbf9f;
+    color: #c68c53;
+    font-family: 'Play', sans-serif;
+    transition: 0.3s;
+    font-size: 120%;
+}
+
+.action-buttons:hover
+{
+    text-decoration: none;
+    color: white;
+	cursor: pointer;
+}
+
+#specialite {
+    text-align: center;
+}
