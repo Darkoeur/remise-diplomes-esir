@@ -33,3 +33,12 @@ The security part has been clearly reported since the app itself is not sure to 
 I'm writing this README on the 19/03/2017, and have started the project there is less than a week after a job interview.
 
 Don't hesitate to contact me, I would enjoy feedbacks
+
+
+---------------------------
+To launch project
+> npm install sails
+> cd projectCloned
+> npm install
+> sails lift --debug
+And it should work ! Go to localhost:1337/
