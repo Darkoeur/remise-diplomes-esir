@@ -1,11 +1,14 @@
 /**
  * ProfilController
  *
- * @description :: Server-side logic for managing Profils
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ * @description :: Server-side logic for managing Profils which are an extension to the user data
+ * 					only the modifiable data will be here
  */
 
 module.exports = {
+	
+	// Action (GET) : send all the data of the user requesting it
+	// Needed : an active session
 	
 	getInfo: function(req,res) {
 		sails.log.debug('The user #' + req.session.user + ' wants to refresh his data');		
@@ -32,6 +35,10 @@ module.exports = {
 		});
 
 	}
+	
+	// Action (POST) : modify one of the attribute
+	// Needed : a JSON containing the attribute to modify and the new value to assign
+	
 	
 };
 

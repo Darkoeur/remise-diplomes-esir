@@ -88,7 +88,7 @@ angular
 		};
 		
 		
-		// ACTUALIZE INFORMATIONS
+		// ACTUALIZE INFORMATIONS OF THE CURRENT USER
 		requests.refresh = function() {
 			
 			var host = '/';

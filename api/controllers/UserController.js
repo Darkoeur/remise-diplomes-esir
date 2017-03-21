@@ -6,6 +6,10 @@
  */
 
 module.exports = {
+	
+	// Action (POST) : log a user on the server side by assigning him a session cookie
+	// Needed : the email and the code of an existing user
+	
 	authenticate: function(req, res) {
 		// 1°) existence of the two needed components email | code
 		if (_.isUndefined(req.param('email'))) {
@@ -37,12 +41,18 @@ module.exports = {
 		
 	},
 	
+	// Action (GET) : tell if a specified user is authenticated
+	// Needed : an active session
+	
 	isAuthenticated: function(req,res) {
 		sails.log.debug('A user wants to know his state with id : ' + req.session.user);
 		
 		if (!req.session.user) return res.json({success:false, message:'Vous n\'êtes pas connecté.'});
 		return res.json({success:true,message:'Vous êtes connecté !',token:req.session.user});
 	},
+	
+	// Action (GET) : delete the server-side session cookie of a user
+	// Needed : an active session
 	
 	logout: function(req, res) {
 		
@@ -62,7 +72,9 @@ module.exports = {
 		});
 	},
 	
-	// The function trying to register a user
+	// Action (POST) : adding a user in our database
+	// Needed : informations about the user and a unique email
+	
 	register: function(req, res) {
 		
 		sails.log.debug('Someone wants to become a user');
