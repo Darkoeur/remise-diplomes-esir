@@ -1,0 +1,152 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ESIR-RDD",
+		"_postman_id": "7b1eb9a1-1faa-9539-165a-5feef7b039a0",
+		"description": "Folder containing the tests for the application esir-remise-diplomes available on GitHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"request": {
+				"url": "109.8.206.12:1337/user",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Listing users"
+			},
+			"response": []
+		},
+		{
+			"name": "Comments",
+			"request": {
+				"url": "109.8.206.12:1337/comment",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Listing comments"
+			},
+			"response": []
+		},
+		{
+			"name": "Connection",
+			"request": {
+				"url": "109.8.206.12:1337/signin",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abc@gmail.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "code",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "A basic connection with the IDs of the bootstraped records"
+			},
+			"response": []
+		},
+		{
+			"name": "Connection state",
+			"request": {
+				"url": "109.8.206.12:1337/refresh",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abc@gmail.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "code",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Asking the server if the current user-agent is logged or not"
+			},
+			"response": []
+		},
+		{
+			"name": "Our informations",
+			"request": {
+				"url": "109.8.206.12:1337/refresh",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "abc@gmail.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "code",
+							"value": "abc",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Getting the last data concerning our authenticated user-agent to then display it nicely"
+			},
+			"response": []
+		},
+		{
+			"name": "Changing data",
+			"request": {
+				"url": "109.8.206.12:1337/change",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\":\"A day i will own the whole world !\"\n}"
+				},
+				"description": "Try to change data with the action 'modify' from the Profil controller"
+			},
+			"response": []
+		}
+	]
+}
