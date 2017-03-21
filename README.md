@@ -26,6 +26,7 @@ Tasks done :
 		- Bootstrap (insert data on server launch)
 		- Session handling
 		- Model validation messages gestion with *sails-hook-validation*
+		- Tests with pre-built requests (Postman)
 		
 I'm trying to follow as much as possible rules listed here :
 	https://github.com/johnpapa/angular-styleguide/blob/master/a1/

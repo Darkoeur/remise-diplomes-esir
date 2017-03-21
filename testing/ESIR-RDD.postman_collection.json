@@ -147,6 +147,54 @@
 				"description": "Try to change data with the action 'modify' from the Profil controller"
 			},
 			"response": []
+		},
+		{
+			"name": "React with a comment",
+			"request": {
+				"url": "109.8.206.12:1337/react",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "message",
+							"value": "Totally fake.",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "receveur",
+							"value": "52",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Add a comment where the receiver is the sender = the current logged user"
+			},
+			"response": []
+		},
+		{
+			"name": "Suppress the comment",
+			"request": {
+				"url": "109.8.206.12:1337/unreact",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "commentID",
+							"value": "3",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Let's try the suppression of the comment"
+			},
+			"response": []
 		}
 	]
 }
