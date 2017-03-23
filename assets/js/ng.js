@@ -2,7 +2,7 @@
 
 // Our global application module, asking for dependency injections
 angular
-    .module('app', ['ngRoute', 'ngAnimate', 'ngStorage', 'toastr', 'RequestHandler', 'ResponseHandler'])
+    .module('app', ['ngFileUpload', 'ngRoute', 'ngAnimate', 'ngStorage', 'toastr', 'RequestHandler', 'ResponseHandler'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {

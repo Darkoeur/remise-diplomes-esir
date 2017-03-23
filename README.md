@@ -17,6 +17,7 @@ Tasks done :
 		- Two services, one for handling the requests and one for the responses
 		- Toastr module added for displaying popup informations
 		- Session handling
+		- File upload angular service and directive (https://github.com/danialfarid/ng-file-upload)
 		
 	BACK (Nodejs/Sails.js - MVC framework build over the top of Express)
 	
@@ -26,6 +27,8 @@ Tasks done :
 		- Bootstrap (insert data on server launch)
 		- Session handling
 		- Model validation messages gestion with *sails-hook-validation*
+		- File upload
+		- Tests with POSTMAN and pre-built requests
 		
 I'm trying to follow as much as possible rules listed here :
 	https://github.com/johnpapa/angular-styleguide/blob/master/a1/
@@ -41,7 +44,7 @@ Don't hesitate to contact me, I would enjoy feedbacks
 
 To launch the project :
 
-- > npm install sails
+- > npm install sails -g
 
 - > cd projectCloned
 

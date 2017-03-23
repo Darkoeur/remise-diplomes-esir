@@ -11,7 +11,7 @@ module.exports = {
 	// Needed : an active session
 	
 	getInfo: function(req,res) {
-		sails.log.debug('The user #' + req.session.user + ' wants to refresh his data');		
+		sails.log.debug('The user : ' + req.session.user + ' wants to refresh his data');		
 		
 		if(!req.session.user) return res.json({success:false,message:'Votre session a expiré !'});
 		
@@ -25,7 +25,7 @@ module.exports = {
 			var formattedUser = user.profil;
 				formattedUser.nom = user.nom;
 				formattedUser.prenom = user.prenom;
-				formattedUser.specialite = user.specialite;		  
+				formattedUser.specialite = user.specialite;
 			  
 			sails.log.debug('Here is the formatted data we send him :');
 			sails.log.debug(formattedUser);
@@ -103,7 +103,7 @@ module.exports = {
 				Profil.update(req.session.profil, {portrait:req.session.user + '.png'}).exec(function (err) {
 					if(err) return res.json({success:false,message:'L\'association avec votre compte a échoué.'});
 					return res.json({success:true,message:'Image enregistrée avec succès !'});
-				}
+				});
 					
 			});
 		}

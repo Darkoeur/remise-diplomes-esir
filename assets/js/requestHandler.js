@@ -133,12 +133,36 @@ angular
                 
                     var givenResponse = {};
                     givenResponse.success = false;
+					givenResponse.message = 'Impossible de joindre le serveur';
                     defer.resolve(givenResponse);
                 
                 });
     
             return defer.promise;
         };
+		
+		requests.changePic = function (file) {
+			var host = '/';
+			var defer = $q.defer();
+			
+			var query = {
+				method: 'POST',
+				url: host + 'upload',
+				data: {image:file}
+			};
+			
+			$http(query)
+				.then(function worked(response) {
+					defer.resolve(response.data);
+				}, function failed(serverResponse) {
+					var givenResponse = {};
+					givenResponse.success = false;
+					givenResponse.message = 'Impossible de joindre le serveur';
+                    defer.resolve(givenResponse);
+				});
+				
+			return defer.promise;
+		};
         
         return requests;
         

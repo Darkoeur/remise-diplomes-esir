@@ -3,7 +3,7 @@
     <h2 class="col-xs-12">{{me.prenom}} {{me.nom}}</h2>
     
     <div class="col-xs-12">
-        <img src="imgs/test.png" alt="Aucune photo disponible" title="" class="student-photos"/>
+        <img src="portraits/{{me.portrait}}" alt="Aucune photo disponible" title="" class="student-photos"/>
     
     </div>
     
@@ -17,9 +17,12 @@
                 <ul>
                     
                     <li>
-                        <span class="labels">Photo de profil :</span> <span class="italic">modifier</span>
-                        <a href="#modify" class="student-modifications"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                    </li>
+                        <span class="labels">Photo de profil :</span>
+						<button type="file" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-height="1000" ngf-max-size="10MB">
+							Choisissez votre nouvelle photo
+						</button>
+						{{f.name}}
+					</li>
                     <li>
                         <span class="labels">Date de naissance :</span> {{me.birthday}} 
                         <a href="#modify" class="student-modifications"><i class="fa fa-pencil" aria-hidden="true"></i></a>

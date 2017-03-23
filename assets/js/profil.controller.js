@@ -9,7 +9,7 @@ angular
     .module('app')
     .controller('profilController', profil);
 
-function profil($sessionStorage, $scope, $location, toastr, Requests, Responses) {
+function profil($sessionStorage, $scope, $location, $timeout, toastr, Requests, Responses, Upload) {
     
     // Initialization to be done here..
 
@@ -70,5 +70,22 @@ function profil($sessionStorage, $scope, $location, toastr, Requests, Responses)
             }, function failed(result) {});
         
     };
+	
+	$scope.uploadFiles = function (file, errFiles) {
+		console.log('submitted an image');
+		$scope.f = file;
+		$scope.errFile = errFiles && errFiles[0];
+		if(file) {
+			file.upload = Upload.upload({
+				url: '/upload',
+				data: {image: file}
+			});
+			
+			file.upload.then(function (response) {
+				Responses.display(response.data);
+			});
+		}
+		
+	};
     
 }
