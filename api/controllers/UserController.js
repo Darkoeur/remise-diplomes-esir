@@ -7,7 +7,7 @@
 
 module.exports = {
 	
-	// Action (POST) : log a user on the server side by assigning him a session cookie
+	// Action (PUT) : log a user on the server side by assigning him a session cookie
 	// Needed : the email and the code of an existing user
 	
 	authenticate: function(req, res) {
@@ -30,10 +30,10 @@ module.exports = {
 				return res.json({success:false, message:'Code invalide !'});
 			}
 			
-			sails.log.debug('A user has logged in with id :' + user.id);
+			sails.log.debug('A user has logged in with id :' + user.id + ' and profil id : ' + user.profil);
 			
 			req.session.user = user.id;
-			
+			req.session.profil = user.profil;
 			return res.json({success:true, message:'Bienvenue ' + user.prenom + ' !', token: user.id});
 			
 		});
@@ -67,6 +67,7 @@ module.exports = {
 			}
 			
 			req.session.user = null;
+			req.session.profil = null;
 			
 			return res.json({success:true, message:'Déconnexion effectuée !'});
 		});
@@ -139,6 +140,52 @@ module.exports = {
 			
 		});
 
+	},
+	
+	// Action (PUT) : get users matching the given informations
+	// Needed : A string describing the users searched
+	search: function(req,res) {
+		sails.log.debug('Someone wants to find users');
+		
+		// 1°) Conformity check
+		if(_.isUndefined(req.param('query'))) {
+			return res.json({success:false,message:'Impossible de répondre à la requête !'});
+		} 
+		
+		// No need to be connected
+		// Parsing the query which should looks like : 'XXXX YYYYY'
+		// Where XXXX may be the prenom and YYYYY the nom
+		// Or the opposite
+		
+		var parsingRegex = /^([a-z]+) ([a-z]+)$/i;
+		sails.log.debug('Regex details : ');
+		sails.log.debug(parsingRegex.exec(req.param('query')));
+		
+		var firstGroup = parsingRegex.exec(req.param('query'))[1];
+		var secondGroup = parsingRegex.exec(req.param('query'))[2];
+		
+		sails.log.debug('Here is the query formatted : (prenom:' + firstGroup + ')(nom:' + secondGroup + ')');
+		
+		// 2°) Returning the matches
+		
+		var correspondingRequest = {
+			or: [
+					{prenom: {'contains':firstGroup}},
+					{nom: {'contains':secondGroup}},
+					{prenom:{'contains':secondGroup}},
+					{nom: {'contains':firstGroup}}
+			]
+		};
+		
+		User.find(correspondingRequest).populate('profil').exec(function(err,matches) {
+			if(err) return res.json({success:false,message:'ERREUR SERVEUR'});
+			if(!matches) return res.json({success:true,message:'Aucun utilisateur correspondant.',users:[]});
+			
+			sails.log.debug('Utilisateurs trouvés :');
+			sails.log.debug(matches);
+			
+			return res.json({success:true,message:'Résultats :',users:matches});
+		});
 	}
 };
 

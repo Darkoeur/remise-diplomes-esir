@@ -77,7 +77,7 @@
 		{
 			"name": "Connection state",
 			"request": {
-				"url": "109.8.206.12:1337/refresh",
+				"url": "109.8.206.12:1337/state",
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -193,6 +193,48 @@
 					]
 				},
 				"description": "Let's try the suppression of the comment"
+			},
+			"response": []
+		},
+		{
+			"name": "Do a research",
+			"request": {
+				"url": "109.8.206.12:1337/search",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "query",
+							"value": "ant gau",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "Make a request for researching users"
+			},
+			"response": []
+		},
+		{
+			"name": "Upload a profile pic",
+			"request": {
+				"url": "109.8.206.12:1337/upload",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"enabled": true,
+							"src": "bobby.png"
+						}
+					]
+				},
+				"description": "Changing the profil pic"
 			},
 			"response": []
 		}

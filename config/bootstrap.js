@@ -13,6 +13,9 @@ module.exports.bootstrap = function(cb) {
 
 	// DO NOT THE REMOVE THE CALLBACKS cb()
 	
+	sails.log.debug('STARTING THE SERVER');
+	sails.log.debug(sails.config.appUrl);
+	
 	Profil.create({}).exec(function(err,profil) {
 		
 		if(err) cb();

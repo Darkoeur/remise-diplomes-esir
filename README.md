@@ -26,7 +26,6 @@ Tasks done :
 		- Bootstrap (insert data on server launch)
 		- Session handling
 		- Model validation messages gestion with *sails-hook-validation*
-		- Tests with pre-built requests (Postman)
 		
 I'm trying to follow as much as possible rules listed here :
 	https://github.com/johnpapa/angular-styleguide/blob/master/a1/
@@ -40,9 +39,14 @@ Don't hesitate to contact me, I would enjoy feedbacks
 
 ---------------------------
 
-To launch project
+To launch the project :
+
 - > npm install sails
+
 - > cd projectCloned
+
 - > npm install
+
 - > sails lift --debug
-And it should work ! Go to localhost:1337/
+
+- And it should work ! Go to localhost:1337/

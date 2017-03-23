@@ -1,24 +1,26 @@
 /**
  * Comment.js
  *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
+ * @description :: Representation on the database of the Comments
+					Defined by the sender, the receiver and the content
  */
 
 module.exports = {
 	migrate:'drop',
+	autoUpdatedAt: true,
+	autoCreatedAt: true,
 	attributes: {
 		receveur: {
-			model:'user'
+			model:'user',
+			required: true
 		},
 		auteur: {
-			model:'user'
+			model:'user',
+			required: true
 		},
 		contenu: {
-			type: 'string'
-		},
-		date: {
-			type: 'string'
+			type: 'string',
+			required: true
 		}
 	}
 };

@@ -24,11 +24,18 @@ module.exports.routes = {
 
 	// JSON API
   
-	'PUT /signup': 'UserController.register',
+	'POST /signup': 'UserController.register',
 	'PUT /signin': 'UserController.authenticate',
 	'GET /logout': 'UserController.logout',
 	'GET /state': 'UserController.isAuthenticated',
-	'GET /refresh': 'ProfilController.getInfo'
+	'PUT /search': 'UserController.search',
+	
+	'GET /refresh': 'ProfilController.getInfo',
+	'POST /change': 'ProfilController.modify',
+	'POST /upload': 'ProfilController.uploadPic',
+	
+	'POST /react': 'CommentController.addOne',
+	'DELETE /unreact': 'CommentController.deleteOne'
   
 
   /***************************************************************************

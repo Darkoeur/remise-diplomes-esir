@@ -1,8 +1,8 @@
 /**
  * Profil.js
  *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
+ * @description :: Representing all the modifiable data a user can have
+ * 					Opposed to the informations given when creating the account
  */
 
 module.exports = {
@@ -21,6 +21,10 @@ module.exports = {
 		description: {
 			type:'string',
 			defaultsTo : ''
+		},
+		portrait: {
+			type:'string',
+			defaultsTo: 'unknown.png'
 		}
 
 	}
