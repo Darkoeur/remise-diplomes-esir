@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <link href="https://fonts.googleapis.com/css?family=Play|Rubik+Mono+One" rel="stylesheet"> 
+        <title>Futur ex-Esirien</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/angular-toastr.css" rel="stylesheet">
+        <link href="css/hover.css" rel="stylesheet">
+        
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/forms.css" rel="stylesheet">
+        <link href="css/profils.css" rel="stylesheet">
+        <link href="css/searchbar.css" rel="stylesheet">
+        <link href="css/navigatemenu.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body ng-app="app" class="container-fluid">
+      
+        <!-- Where will be included our contents -->
+        <div ng-view id="include" class="viewports"></div>
+
+        
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        
+        <!-- bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        
+        
+        <!-- fontawesome -->
+        <script src="https://use.fontawesome.com/dfa9ba6b19.js"></script>
+
+        
+        <!-- angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+        
+        <!-- services & modules -->
+        <script src="js/angular-toastr.tpls.js"></script>
+        <script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+		<script src="js/ng-file-upload.min.js"></script>
+        <script src="js/requestHandler.js"></script>
+        <script src="js/responseHandler.js"></script>
+        
+        <!-- the global module -->
+        <script src="js/ng.js"></script>
+        
+        <!-- all the controllers, each one in a separated file -->
+        <script src="js/home.controller.js"></script>
+        <script src="js/signup.controller.js"></script>
+        <script src="js/signin.controller.js"></script>
+        <script src="js/profil.controller.js"></script>
+        <script src="js/404.controller.js"></script>
+    </body>
+</html>

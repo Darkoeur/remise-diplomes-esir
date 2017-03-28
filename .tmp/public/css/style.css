@@ -1,0 +1,151 @@
+html
+{
+    padding: 0;
+    margin: 0;
+}
+
+body.container-fluid
+{
+    padding: 0px;
+    background-color: darkslateblue;
+}
+
+.icon-esir
+{
+    position: absolute;
+    bottom: 30px;
+    right: 100px;
+    width: 100px;
+}
+
+.icon-rennes
+{
+    position: absolute;
+    bottom: 30px;
+    right: 230px;
+    width: 100px;
+}
+
+h1
+{
+    font-size: 4em;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+h2
+{
+    font-family: 'Rubik Mono One', sans-serif;
+    margin-bottom: 25px;
+    font-size: 250%;
+}
+
+h3
+{
+    font-size: 3em;
+    font-family: 'Play', sans-serif;
+    margin-bottom: 25px;
+}
+
+.italic {
+    font-style: italic;
+    font-size: 90%;
+}
+
+
+.content-row
+{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+    background-color: white;
+    box-shadow: -20px -20px lightgray;
+    transition: 0.5s;
+}
+
+
+.loading-squares
+{
+    position: relative;
+    padding-left: 0px;
+}
+
+.loading-squares li
+{
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.first, .third
+{
+    margin-top: 50px;
+}
+
+.align-right
+{
+    text-align: right;
+}
+
+.content-block
+{
+    margin-top: 20px;
+}
+
+.nav-links
+{
+    color: lightslategray;
+    font-size: 90%;
+    font-family: 'Play', sans-serif;
+}
+
+#back-button
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-width: 50px;
+    min-height: 50px;
+    
+}
+
+.color-blue
+{
+    background-color: cornflowerblue;
+}
+
+.color-red
+{
+    background-color: indianred;
+}
+
+.color-black
+{
+    background-color: black;
+}
+
+.color-green
+{
+    background-color: mediumseagreen;
+}
+.second {
+    position:relative;
+    top:-50px;
+}
+
+.home-bot {
+    text-align: center;
+    color: white;
+    margin-bottom: 100px;
+}
+.home-bot .app-icon
+{
+    display: inline-block;
+    font-size: 200%;
+    color: white;
+}

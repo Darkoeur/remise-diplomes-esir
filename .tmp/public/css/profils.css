@@ -1,0 +1,97 @@
+.student-pics
+{
+    width: 100px;
+}
+
+.student-cards
+{
+    background-color: indianred;
+    color: white;
+    padding: 10px;
+}
+.comments-thumb {
+    width: 80px;
+    display: inline-block;
+    border: none;
+    margin: 0px;
+}
+
+.comments-identity {
+    text-align: left;
+    margin-top: 5px;
+}
+
+.comments-top {
+    margin-bottom: 20px;
+    color: white;
+    background-color: darkslategray;
+    padding: 5px;
+}
+
+.comments-pic {
+    text-align: right;
+    padding: 0px;
+}
+
+h4 {
+    font-family: 'Play', sans-serif;
+    font-size: 140%;
+}
+
+.comments-block {
+    padding: 10px;
+    border: solid darkslategrey 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-family: monospace;
+}
+
+.student-boxes {
+    padding: 10px;
+    border: solid firebrick 1px;
+}
+
+.student-modifications {
+    display: inline-block;
+    color: white;
+    padding: 5px 8px;
+    border: solid white 1px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.student-modifications:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.student-photos {
+    width: 300px;
+    max-height: 500px;
+}
+
+.student-color {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    
+    border:solid white 2px;
+}
+
+.student-cards ul li {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.student-cards .labels
+{
+    font-family: 'Play', sans-serif;
+    font-size: 120%;
+}
+
+

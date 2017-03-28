@@ -1,0 +1,132 @@
+{
+  "data": {
+    "comment": [],
+    "profil": [
+      {
+        "color": "black",
+        "birthday": "01/01/2000",
+        "description": "",
+        "portrait": "unknown.png",
+        "createdAt": "2017-03-28T17:46:22.519Z",
+        "updatedAt": "2017-03-28T17:46:22.519Z",
+        "id": 1
+      }
+    ],
+    "user": [
+      {
+        "prenom": "Antoine",
+        "nom": "GAUTRAIN",
+        "specialite": "Boss du système",
+        "email": "abc@gmail.com",
+        "code": "abc",
+        "profil": 1,
+        "createdAt": "2017-03-28T17:46:22.527Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "comment": {
+      "receveur": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "receveur"
+      },
+      "auteur": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "auteur"
+      },
+      "contenu": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "profil": {
+      "color": {
+        "type": "string",
+        "defaultsTo": "black"
+      },
+      "birthday": {
+        "type": "string",
+        "defaultsTo": "01/01/2000"
+      },
+      "description": {
+        "type": "string",
+        "defaultsTo": ""
+      },
+      "portrait": {
+        "type": "string",
+        "defaultsTo": "unknown.png"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "nom": {
+        "type": "string"
+      },
+      "prenom": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "specialite": {
+        "type": "string"
+      },
+      "code": {
+        "type": "string"
+      },
+      "profil": {
+        "type": "integer",
+        "model": "profil",
+        "foreignKey": true,
+        "alias": "profil",
+        "unique": true
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "comment": {},
+    "profil": {
+      "id": 1
+    },
+    "user": {
+      "id": 1
+    }
+  }
+}

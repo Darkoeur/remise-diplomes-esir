@@ -1,0 +1,65 @@
+
+.navigate-button {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+    background-color: rosybrown;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    z-index: 9;
+}
+.navigate-menu {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    left: 0px;
+    z-index: 8;
+    background-color: #d9bfbf;
+    border-right: solid 5px rosybrown;
+    text-align: center;
+    color: #503030;
+    font-family: 'Play', sans-serif;
+    margin-left: 0px;
+    padding: 0px;
+    padding-top: 50px;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.navigate-menu ul li {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navigate-menu ul
+{
+    padding-left: 0px;
+}
+
+.navigate-menu a {
+    color: inherit;
+}
+
+.navigate-menu a:hover {
+    text-decoration: none;
+}
+
+.navigate-menu li:hover
+{
+    background-color: #503030;
+    color: white;
+}
+
+.navigate-menu h3
+{
+    color: #503030;
+}
+
+
+.navigate-menu.ng-hide {
+    left: -1000px;
+    transition: all linear 1s;
+}
