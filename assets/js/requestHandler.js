@@ -12,7 +12,7 @@ angular
             var defer = $q.defer();
             
             var query = {
-                method: 'PUT',
+                method: 'POST',
                 url: host + 'signup',
                 data: {prenom: prenom, nom: nom, email: email, specialite: specialite, code: code}
             };
